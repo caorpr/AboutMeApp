@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">About Me App</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_running">RunningActivit</string>
+    <string name="title_activity_food">FoodActivity</string>
+    <string name="title_activity_music">MusicActivity</string>
+    <string name="title_activity_board_games">BoardGamesActivity</string>
+    <string name="title_activity_video_games">VideoGamesActivity</string>
+</resources>
