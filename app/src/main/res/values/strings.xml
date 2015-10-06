@@ -8,4 +8,5 @@
     <string name="title_activity_music">MusicActivity</string>
     <string name="title_activity_board_games">BoardGamesActivity</string>
     <string name="title_activity_video_games">VideoGamesActivity</string>
+    <string name="swapScreenText">Click here to change the screen</string>
 </resources>

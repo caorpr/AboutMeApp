@@ -4,9 +4,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="ctec.aboutmeapp.RunningActivity">
+    tools:context="ctec.aboutmeapp.RunningActivity"
+    android:background="@drawable/steveprefontaine">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/swapScreenText"
+        android:id="@+id/goToVideoGames"
+        android:layout_marginBottom="37dp"
+        android:width="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

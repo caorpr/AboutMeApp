@@ -4,13 +4,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.view.View;
+import android.content.Intent;
 
-public class RunningActivity extends AppCompatActivity {
+public class RunningActivity extends AppCompatActivity
+{
+
+    private Button mainButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_running);
+
+        mainButton = (Button) findViewById(R.id.goToVideoGames);
+
+
+        setupListeners();
     }
 
     @Override
@@ -33,5 +45,20 @@ public class RunningActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setupListeners()
+    {
+        mainButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View buttonView)
+            {
+                Intent changeScreen = new Intent(buttonView.getContext(), FoodActivity.class);
+                startActivityForResult(changeScreen, 0);
+            }
+
+
+        });
+
     }
 }
