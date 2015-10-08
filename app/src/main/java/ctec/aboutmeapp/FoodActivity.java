@@ -4,13 +4,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.view.View;
+import android.content.Intent;
 
-public class FoodActivity extends AppCompatActivity {
+public class FoodActivity extends AppCompatActivity
+{
+
+    private Button nextButton;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
+
+        nextButton = (Button) findViewById(R.id.gotoVideoGame);
+
+        setupListeners();
     }
 
     @Override
@@ -21,7 +33,8 @@ public class FoodActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -34,4 +47,21 @@ public class FoodActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void setupListeners()
+    {
+        nextButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View buttonView)
+            {
+                Intent changeScreen = new Intent(buttonView.getContext(), VideoGamesActivity.class);
+                startActivityForResult(changeScreen, 0);
+            }
+
+
+        });
+
+
+    }
 }
+
